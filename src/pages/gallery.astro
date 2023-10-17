@@ -1,0 +1,44 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Gallery" description = {SITE_DESCRIPTION} />
+	</head>
+	<body>
+        <Header title="Gallery"/>
+		<main>
+			<p>
+				Photos taken with a Canon 7D with a 24-70mm lens.
+			</p>
+			<div clas="gallery">
+				<img src="/public/soul-atl.jpg" alt="a 'Made with Soul in Atlanta' sign found on a random street" />
+				<img src="/public/just-be-happy.jpg" alt="a 'Just Be Happy' sign on the front of a store in New York City" />
+				<img src="/public/biloxi.jpg" alt="waves by the beach in Biloxi, Mississippi" />
+				<img src="/public/water.jpg" alt="a view of the waves of Biloxi Beach" />
+				<img src="/public/coda.jpg" alt="spiral staircase" />
+			</div>
+		</main>
+	</body>
+	<Footer />
+</html>
+
+<style>
+	.gallery {
+		display: flex;
+		overflow-x: scroll;
+		white-space: nowrap;
+		align-items: center;
+	}
+	p {
+		font-size: 0.75em
+		color: var(--gray-light)
+	}
+
+</style>
+	
