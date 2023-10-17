@@ -1,25 +1,41 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
+import { Image } from "astro:assets";
+---
 
-
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Hi, I'm Anh</title>
+		<BaseHead title="About Me"  description = {SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<p>
-            Welcome to my comfort spot. I am Anh, and I am a student at Georgia Tech.
-            I am currently studying Computer Science, diving into the deeper wonders of 
-            AI and ML. I am joyous to share my tidbits of projects and hobbies through this website.
-        </p>
-    
-        <p>
-            In my free time, I love to learn about new things, whether it be a new
-            skill, hobby, or activity. I am an avid journaler, and I love to collect 
-            various types of notebooks and pens to write with. I also love to take photos,
-            specializing in digital photography and occasionally film photography.
-        </p>
+		<Header About />
+        <img src="/public/me.jpg" alt="a photo of myself" class="self" width="300" height="300"/>
+		<main>
+			<p>
+                Welcome to my comfort spot. I am Anh, and I am a student at Georgia Tech.
+                I am currently studying Computer Science, diving into the deeper wonders of 
+                AI and ML. I am joyous to share my tidbits of projects and hobbies through this website.
+            </p>
+        
+            <p>
+                In my free time, I love to learn about new things, whether it be a new
+                skill, hobby, or activity. I am an avid journaler, and I love to collect 
+                various types of notebooks and fountain pens to write with. I also love to take photos,
+                specializing in digital photography and occasionally film photography.
+            </p>
+		</main>
 	</body>
+	<Footer />
 </html>
+
+<style>
+    .self {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
