@@ -1,7 +1,5 @@
 import { defineConfig } from 'astro/config';
 
-const AWS = require('aws-sdk');
-
 
 export default defineConfig({
     site: 'https://anhhtdang.com',
