@@ -23,7 +23,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
 				Check out my photos and projects using the links above.
 			</p>
 			
-			<img src="/compressed/biloxi.jpeg" alt="waves by the beach in Biloxi, Mississippi" />
+			<img class="self" src="/compressed/throwback.jpeg" alt="me" />
+			<p class="caption"> I love computer science!!</p>
 		</main>
 	</body>
 	<Footer />
@@ -37,4 +38,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
 	}
 	footer {
 		margin-top: auto;
+	}
+	.self {
+		display: block;
+		height:500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.caption {
+		text-align: center;
+		font-size: 0.8em;
 	}
