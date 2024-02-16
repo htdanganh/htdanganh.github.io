@@ -3,9 +3,14 @@ const YEAR = new Date().getFullYear();
 export default {
   footer: (
     <footer>
+      <hr />
+      it's the little things in life
+      <br />
+      <a > LinkedIn</a>
+      <a > Github</a>
+      <a > Gmail</a>
       <small>
-        <time>{YEAR}</time> © Your Name.
-        <a href="/feed.xml">RSS</a>
+        <time>{YEAR}</time> © Anh Dang.
       </small>
       <style jsx>{`
         footer {
